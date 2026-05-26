@@ -13,17 +13,36 @@
       padding: 0;
     }
     body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: #0a0a0a;
+      font-family: 'Inter', system_ui, sans-serif;
+      background: var(--bg);
       color: #fff;
-      min-height: 100dvh;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .container {
+      max-width: 920px;
+      width: 100%;
+      padding: 0 16px;
       display: flex;
       flex-direction: column;
+      height: 100vh;
+      max-height: 100vh;
     }
     .chat-container {
-      height: calc(100dvh - 120px); /* Header + input aproximado */
+      height: 520px;
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
+    }
+
+    @media (max-width: 640px) {
+      .chat-container {
+        height: 420px;
+      }
     }
     .message {
       max-width: 82%;
